@@ -1,0 +1,26 @@
+syntax = "proto3";
+package apod;
+
+option go_package = "github.com/OhAnotherTag/apod-grpc";
+
+service ApodService {
+  rpc GetApod (ApodRequest) returns (ApodReply) {}
+}
+
+message ApodRequest {
+  string date = 1;
+}
+
+message ApodReply {
+  Apod data = 1;
+}
+
+message Apod {
+  string date = 1;
+  string explanation = 2;
+  string hdurl = 3;
+  string media_type = 4;
+  string service_version = 5;
+  string title = 6;
+  string url = 7;
+}
