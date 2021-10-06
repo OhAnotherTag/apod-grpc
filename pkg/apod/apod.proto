@@ -1,7 +1,7 @@
 syntax = "proto3";
 package apod;
 
-option go_package = "github.com/OhAnotherTag/apod-grpc";
+option go_package = "github.com/OhAnotherTag/apod-grpc;apod_grpc";
 
 service ApodService {
   rpc GetApod (ApodRequest) returns (ApodReply) {}
